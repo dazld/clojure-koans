@@ -1,5 +1,5 @@
 (ns koans.04-sets
-  (:require [koan-engine.core :refer :all]))
+    (:require [koan-engine.core :refer :all]))
 
 (meditations
   "You can create a set by converting another collection"
@@ -9,7 +9,7 @@
   (= 3 (count #{1 2 3}))
 
   "Remember that a set is a *mathematical* set"
-  (=  (set '(1 1 2 2 3 3 4 4 5 5)))
+  (= (set '(1 1 2 2 3 3 4 4 5 5)))
 
   "You can ask clojure for the union of two sets"
   (= #{1 2 3 4 5} (clojure.set/union #{1 2 3 4} #{2 3 5}))

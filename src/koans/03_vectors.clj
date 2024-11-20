@@ -1,5 +1,5 @@
 (ns koans.03-vectors
-  (:require [koan-engine.core :refer :all]))
+    (:require [koan-engine.core :refer :all]))
 
 (meditations
   "You can use vectors in clojure as array-like structures"
@@ -27,7 +27,7 @@
   (= :jelly (nth [:peanut :butter :and :jelly] 3))
 
   "You can also slice a vector"
-  (= [:butter :and ] (subvec [:peanut :butter :and :jelly] 1 3))
+  (= [:butter :and] (subvec [:peanut :butter :and :jelly] 1 3))
 
   "Equality with collections is in terms of values"
   (= (list 1 2 3) (vector 1 2 3)))

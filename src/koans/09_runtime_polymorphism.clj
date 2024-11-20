@@ -1,13 +1,13 @@
 (ns koans.09-runtime-polymorphism
-  (:require [koan-engine.core :refer :all]))
+    (:require [koan-engine.core :refer :all]))
 
 (defn hello
-  ([] "Hello World!")
-  ([a] (str "Hello, you silly " a "."))
-  ([a & more] (str "Hello to this group: "
-                   (apply str
-                          (interpose ", " (concat (list a) more)))
-                   "!")))
+      ([] "Hello World!")
+      ([a] (str "Hello, you silly " a "."))
+      ([a & more] (str "Hello to this group: "
+                       (apply str
+                              (interpose ", " (concat (list a) more)))
+                       "!")))
 
 (defmulti diet (fn [x] (:eater x)))
 (defmethod diet :herbivore [a] (str (:name a) " eats veggies."))
@@ -22,7 +22,7 @@
   (= "Hello, you silly world." (hello "world"))
 
   "Or with many arguments"
-  (= "Hello to this group: Peter, Paul, Mary!" 
+  (= "Hello to this group: Peter, Paul, Mary!"
      (hello "Peter" "Paul" "Mary"))
 
   "Multimethods allow more complex dispatching"
@@ -31,7 +31,7 @@
 
   "Animals have different names"
   (= "Thumper eats veggies."
-    (diet {:species "rabbit" :name "Thumper" :age 1 :eater :herbivore}))
+     (diet {:species "rabbit" :name "Thumper" :age 1 :eater :herbivore}))
 
   "Different methods are used depending on the dispatch function result"
   (= "Simba eats animals."

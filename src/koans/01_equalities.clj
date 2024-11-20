@@ -1,5 +1,5 @@
 (ns koans.01-equalities
-  (:require [koan-engine.core :refer :all]))
+    (:require [koan-engine.core :refer :all]))
 
 (meditations
   "We shall contemplate truth by testing reality, via equality"
@@ -15,7 +15,7 @@
   (= true (= 2 2/1))
 
   "You cannot generally float to heavens of integers"
-  (= false(= 2 2.0))
+  (= false (= 2 2.0))
 
   "But a looser equality is also possible"
   (= true (== 2.0 2))

@@ -1,5 +1,5 @@
 (ns koans.05-maps
-  (:require [koan-engine.core :refer :all]))
+    (:require [koan-engine.core :refer :all]))
 
 (meditations
   "Don't get lost when creating a map"
@@ -9,7 +9,7 @@
   (= {:a 1} (hash-map :a 1))
 
   "The size is the number of entries"
-  (= 2(count {:a 1 :b 2}))
+  (= 2 (count {:a 1 :b 2}))
 
   "You can look up the value for a given key"
   (= 2 (get {:a 1 :b 2} :b))
@@ -24,7 +24,7 @@
   (= "Vancouver" ({2006 "Torino" 2010 "Vancouver" 2014 "Sochi"} 2010))
 
   "You may not be able to find an entry for a key"
-  (= nil  (get {:a 1 :b 2} :c))
+  (= nil (get {:a 1 :b 2} :c))
 
   "But you can provide your own default"
   (= :key-not-found (get {:a 1 :b 2} :c :key-not-found))
@@ -46,5 +46,5 @@
      (sort (keys {2010 "Vancouver" 2014 "Sochi" 2006 "Torino"})))
 
   "You can get the values in a similar way"
-  (= (list "Sochi" "Torino" "Vancouver" )
+  (= (list "Sochi" "Torino" "Vancouver")
      (sort (vals {2006 "Torino" 2010 "Vancouver" 2014 "Sochi"}))))

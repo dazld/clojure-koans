@@ -1,8 +1,8 @@
 (ns koans.06-functions
-  (:require [koan-engine.core :refer :all]))
+    (:require [koan-engine.core :refer :all]))
 
 (defn multiply-by-ten [n]
-  (* 10 n))
+      (* 10 n))
 
 (defn square [n] (* n n))
 
@@ -30,7 +30,7 @@
 
   "Functions can also take other functions as input"
   (= 20 ((fn [f] (f 4 5))
-           #(* %1 %2)))
+          #(* %1 %2)))
 
   "Higher-order functions take function arguments"
   (= 25 (#(%1 5)
